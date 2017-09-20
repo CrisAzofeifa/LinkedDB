@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="linkeddb.CrearJsonStoreController">
+   <children>
+      <TextField fx:id="NombreNuevaBase" layoutX="38.0" layoutY="76.0" />
+      <Label layoutX="14.0" layoutY="47.0" text="Inserte el nombre de la nueva base." />
+      <TextField fx:id="NuevoAtributo" layoutX="38.0" layoutY="188.0" />
+      <Label layoutX="70.0" layoutY="150.0" text="Insertar Atributo" />
+      <ComboBox layoutX="232.0" layoutY="188.0" prefHeight="25.0" prefWidth="108.0" />
+      <Button layoutX="39.0" layoutY="330.0" mnemonicParsing="false" text="Aceptar" />
+      <Button layoutX="147.0" layoutY="330.0" mnemonicParsing="false" text="Cancelar" />
+   </children>
+</AnchorPane>
