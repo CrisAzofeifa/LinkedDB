@@ -14,7 +14,7 @@ import javafx.fxml.Initializable;
  *
  * @author cris
  */
-public class CrearJsonStoreController implements Initializable {
+public class CrearObjetosController implements Initializable {
 
     /**
      * Initializes the controller class.

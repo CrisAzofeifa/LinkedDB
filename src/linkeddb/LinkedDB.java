@@ -5,12 +5,17 @@
  */
 package linkeddb;
 
+import java.io.IOException;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import org.datos1.linkedDB.listas.ListaCircular;
+import org.datos1.linkedDB.lógica.AccesoDatos;
 import org.datos1.linkedDB.lógica.Metadata;
+import org.datos1.linkedDB.lógica.Objeto;
+import org.json.simple.parser.ParseException;
 
 /**
  *
@@ -33,6 +38,12 @@ public class LinkedDB extends Application {
      */
     public static void main(String[] args) {
         launch(args);
+        
+        Objeto meta = Objeto.getInstance();
+        meta.crearObjeto("Estudiantes", "Pepe");
+        meta.insertarAtributos("Estudiantes", "Pepe", "edad");
+        
+        
         
         
     }

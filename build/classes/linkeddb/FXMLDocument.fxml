@@ -1,18 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.media.*?>
 <?import java.lang.*?>
 <?import java.util.*?>
 <?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane id="AnchorPane" prefHeight="533.0" prefWidth="694.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="linkeddb.FXMLDocumentController">
+<AnchorPane id="AnchorPane" fx:id="CreaciónBase" prefHeight="533.0" prefWidth="694.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="linkeddb.FXMLDocumentController">
   <children>
-    <Button id="JsonStoreCreator" fx:id="button" layoutX="64.0" layoutY="475.0" onAction="#handleButtonAction" text="CrearBase" />
     <Label fx:id="label" layoutX="126.0" layoutY="120.0" minHeight="16.0" minWidth="69.0" />
-    <TreeView layoutX="14.0" layoutY="40.0" prefHeight="422.0" prefWidth="199.0" />
+    <TreeView fx:id="VistaArbol" layoutX="14.0" layoutY="40.0" prefHeight="422.0" prefWidth="199.0">
+         <contextMenu>
+            <ContextMenu fx:id="OperacionesDB" onAction="#OperacionesDB">
+              <items>
+                <MenuItem mnemonicParsing="false" />
+              </items>
+            </ContextMenu>
+         </contextMenu></TreeView>
     <Label layoutX="64.0" layoutY="14.0" text="Bases de Datos" />
-      <TextField fx:id="Nombre" layoutX="290.0" layoutY="89.0" />
-      <TextField fx:id="NOmbreObjeto" layoutX="290.0" layoutY="184.0" />
+      <Button fx:id="RefreshButton" layoutX="524.0" layoutY="38.0" mnemonicParsing="false" onAction="#RefrescarBases" text="Refresh" />
+      <Button fx:id="CrearDB" layoutX="419.0" layoutY="38.0" mnemonicParsing="false" onAction="#CrearNuevaBase" text="CrearDB" />
   </children>
 </AnchorPane>

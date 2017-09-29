@@ -1,1 +1,1 @@
-{"Nombre":"Estudiantes","Atributos":[]}
+{"Nombre":"Estudiantes","Atributos":["nombre","edad"],"Tipos":["String","int"]}

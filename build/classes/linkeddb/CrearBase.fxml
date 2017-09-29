@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="234.0" prefWidth="608.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="linkeddb.CrearBaseController">
+   <children>
+      <TextField fx:id="NombreDB" layoutX="34.0" layoutY="74.0" />
+      <TextField fx:id="NombreAtributo" layoutX="279.0" layoutY="74.0" />
+      <Label layoutX="31.0" layoutY="42.0" text="Nombre de la base nueva" />
+      <Label layoutX="302.0" layoutY="44.0" text="Nombre del atributo" />
+      <Button fx:id="CrearDB" layoutX="419.0" layoutY="190.0" mnemonicParsing="false" onAction="#crearDB" text="CrearBase" />
+      <Button fx:id="Cancelar" layoutX="521.0" layoutY="190.0" mnemonicParsing="false" onAction="#CancelarCreación" text="Cancelar" />
+      <ComboBox fx:id="Tipos" layoutX="293.0" layoutY="105.0" prefWidth="150.0" />
+      <Button fx:id="AñadirAtributo" layoutX="474.0" layoutY="74.0" mnemonicParsing="false" onAction="#AñadirAtributo" text="Añadir Atributo" />
+      <Button fx:id="Ayuda" layoutX="51.0" layoutY="194.0" mnemonicParsing="false" onAction="#DesplegarAyuda" text="Ayuda" />
+   </children>
+</AnchorPane>

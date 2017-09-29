@@ -1,18 +1,37 @@
 package org.datos1.linkedDB.listas;
 
+/**
+ * listaDoble genérica
+ * @author cris
+ * @param <Type>  tipo de la lista
+ */
 public class ListaDoble<Type> {
-    
+    /**
+     * atributos de la lista
+     */
     private NodoDoble<Type> inicio, fin;
     private int total_nodos = 0;
     
+    /**
+     * constructor
+     */
     public ListaDoble(){
         inicio=fin=null;
     }
     
+    /**
+     * revisa si está vacía o no
+     * @return true o false
+     */
     public boolean esta_vacia(){
         return inicio==null;
     }
     
+    
+    /**
+     * agrega al final de la lista
+     * @param elemento dato que va a agregar
+     */
     public void agregar_final(Type elemento){
         if(!esta_vacia()){
             fin = new NodoDoble(elemento, null, fin);
@@ -26,6 +45,11 @@ public class ListaDoble<Type> {
      
     }
     
+    
+    /**
+     * agrega al inicio de la lista
+     * @param elemento dato que va a agregar
+     */
     public void agregar_inicio(Type elemento){
         if(!esta_vacia()){
             inicio = new NodoDoble(elemento, inicio, null);
@@ -39,6 +63,9 @@ public class ListaDoble<Type> {
  
     }
     
+    /**
+     * imprime la lista
+     */
     public void imprimir(){
         if(esta_vacia()){
             System.out.println("Está vacía");
@@ -59,6 +86,11 @@ public class ListaDoble<Type> {
         
     }
     
+    /**
+     * verifica si existe el elemento en la lista
+     * @param elemento dato que se desea revisar si existe
+     * @return true o false
+     */
     public boolean existe(String elemento){
         NodoDoble pivote = inicio;
         while (pivote!=null) {
@@ -73,6 +105,11 @@ public class ListaDoble<Type> {
     }
     
     
+    /**
+     * elimina un nodo de la lista
+     * @param elemento dato que se desea eliminar
+     * @return true o false 
+     */
     public boolean eliminar(Type elemento){  
         
         NodoDoble anterior = null;
@@ -107,29 +144,45 @@ public class ListaDoble<Type> {
         return false;
     }
  
-    
+    /**
+     * saca el nodo inicial
+     * @return inicio
+     */
     public NodoDoble<Type> getInicio() {
         return inicio;
     }
 
+    /**
+     * define el inicio
+     * @param inicio nodo que será el incio
+     */
     public void setInicio(NodoDoble<Type> inicio) {
         this.inicio = inicio;
     }
 
+    /**
+     * saca el final de la lista
+     * @return fin
+     */
     public NodoDoble<Type> getFin() {
         return fin;
     }
 
+    
+    /**
+     * define el final de la lista 
+     * @param fin nodo que va a ser el nuevo fin 
+     */
     public void setFin(NodoDoble<Type> fin) {
         this.fin = fin;
     }
-
+    
+    /**
+     * saca el largo
+     * @return total de nodos
+     */
     public int getTotal_nodos() {
         return total_nodos;
-    }
-
-    public void setTotal_nodos(int total_nodos) {
-        this.total_nodos = total_nodos;
     }
     
 }
